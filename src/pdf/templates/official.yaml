@@ -1,0 +1,41 @@
+# 官方文档模板配置
+name: official_document
+description: 依法履职处理意见书等官方文档
+
+# 页面设置
+page:
+  size: A4
+  margin:
+    left: 25
+    right: 25
+    top: 15
+    bottom: 20
+
+# 样式配置
+styles:
+  title:
+    font_size: 18
+    align: center
+    y_position: 30
+  
+  content:
+    font_size: 11
+    line_height: 7
+    first_line_indent: 8
+  
+  contact:
+    font_size: 11
+    
+# 装饰配置
+decoration:
+  border:
+    enabled: true
+    color: [220, 50, 50]
+    width: 3
+    
+# 印章配置
+stamp:
+  position:
+    x: 165
+    y_offset: 25  # 相对于联系信息的偏移
+  radius: 20

@@ -1,0 +1,92 @@
+{
+    // ==== 基础编辑器设置 ====
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.rulers": [
+        88
+    ],
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    // ==== 保存时格式化 ====
+    "editor.formatOnSave": true,
+    // ==== Python 格式化 ====
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    // ==== Ruff Linting 与 Import 排序 ====
+    "ruff.lint.enable": true,
+    "ruff.format.enable": true, // 让 Ruff 控制格式化
+    "ruff.organizeImports": true, // 让 Ruff 自动执行 isort 规则
+    "ruff.fixAll": true, // 保存时自动修复
+    "ruff.lineLength": 88, // 对齐 Black 默认
+    // ==== 保存时执行 ====
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "always",
+        "source.fixAll": "always"
+    },
+    // ==== TODO-Tree 设置 ====
+    "todo-tree.highlights.defaultHighlight": {
+        "icon": "alert",
+        "type": "text-and-comment",
+        "foreground": "#000000", // black
+        "background": "#FFFFFF", // white
+        "opacity": 50,
+        "iconColour": "#0000FF", // blue
+        "gutterIcon": true
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "icon": "checkbox",
+            "foreground": "#000000", // black
+            "background": "#FFFF00", // yellow
+            "iconColour": "#FFFF00" // yellow
+        },
+        "NOTE": {
+            "icon": "note",
+            "foreground": "#FFFFFF", // white
+            "background": "#6495ED", // cornflowerblue
+            "iconColour": "#6495ED"
+        },
+        "FIXME": {
+            "icon": "tools",
+            "foreground": "#DC143C", // crimson
+            "background": "#DEB887", // burlywood
+            "iconColour": "#DEB887"
+        },
+        "BUG": {
+            "icon": "bug",
+            "foreground": "#FFFFFF", // white
+            "background": "#DC143C", // crimson
+            "iconColour": "#DC143C"
+        },
+        "[ ]": {
+            "icon": "check",
+            "foreground": "#000000", // black
+            "background": "#FFFFFF", // white
+            "iconColour": "#FFFF00" // yellow
+        },
+        "[x]": {
+            "icon": "check",
+            "foreground": "#FFFFFF", // white
+            "background": "#008000", // green
+            "iconColour": "#008000"
+        },
+        "TEMP": {
+            "icon": "flame",
+            "foreground": "#FFFFFF", // white
+            "background": "#FFA500", // orange
+            "iconColour": "#FFA500"
+        }
+    },
+    "todo-tree.general.tags": [
+        "BUG", // 明确存在的错误或缺陷
+        "FIXME", // 需要修复的代码
+        "TODO", // 待办事项
+        "NOTE", // 重要说明
+        "[ ]", // 未完成任务
+        "[x]", // 已完成任务
+        "TEMP" // 临时标记（实验、测试、临时方案）
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*"
+}
