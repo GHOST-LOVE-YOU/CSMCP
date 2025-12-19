@@ -10,6 +10,7 @@ dependencies = [
     "fpdf2>=2.8.5",
     "isort>=7.0.0",
     "pypdf>=6.4.1",
+    "python-dotenv>=1.2.1",
     "pyyaml>=6.0.3",
     "reportlab>=4.4.6",
     "ruff>=0.14.8",
